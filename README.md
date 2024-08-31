@@ -1,14 +1,14 @@
 # DEPLOY AWS LAMBDA FUNCTION CI/CD JENKINS
 
-Repositori ini menjabarkan langkah-langkah bagaimana cara untuk men-deploy AWS Lambda Function print 'Hello World!' phyton dengan menggunakan GitHub dan CI/CD automation server Jenkins. Dengan beberapa metode yaitu Jenkins Freestyle Project dan Jenkins Pipeline.  
+Repositori ini menjabarkan langkah-langkah bagaimana cara untuk men-deploy AWS Lambda Function print 'Hello World!' Phyton dengan menggunakan GitHub dan CI/CD automation server Jenkins. Dengan beberapa metode yaitu Jenkins Freestyle Project dan Jenkins Pipeline.  
 <br> 
 
 ## Alat yang diperlukan pada cara ini:
 
-  1. Windows: Perangkat yang digunakan pada cara ini
-  2. Jenkins: Aplikasi server otomatis
-  3. AWS Console: Lambda, API Gateway, Credentials
-  4. Ngrok: HTTP Tunnel
+  1. Windows: Perangkat yang digunakan pada cara ini.
+  2. Jenkins: Aplikasi server otomatis.
+  3. AWS Console: Lambda, API Gateway, Credentials.
+  4. Ngrok: HTTP Tunnel.
 <br> 
 
 ## Menyiapkan AWS Lambda 
@@ -16,15 +16,15 @@ Repositori ini menjabarkan langkah-langkah bagaimana cara untuk men-deploy AWS L
 <img width="580" alt="Screenshot_1" src="https://github.com/user-attachments/assets/bfaff337-b894-4a15-9e84-b7c71f6f465a">
 <img width="580" alt="Screenshot_2" src="https://github.com/user-attachments/assets/458f6ee7-c2ee-479b-a7ae-3e03ac8eccf2"> <br> 
 
--   **Buka AWS Lambda** sebagai layanan serverless 
--   **Create Function** untuk membuat fungsi baru
--   **author from scratch** untuk membuat fungsi baru tanpa template
--   function name: bebas 
--   runtime: Python 3.8 
--   architecture: x86_64 
--   executing role: use an existing role 
--   exiting role: labrole 
--   lalu **create function** 
+-   **Buka AWS Lambda** sebagai layanan serverless.
+-   **Create Function** untuk membuat fungsi baru.
+-   **Author from scratch** untuk membuat fungsi baru tanpa template.
+-   Function name: Bebas.
+-   Runtime: Python 3.8.
+-   Architecture: x86_64.
+-   Executing role: use an existing role.
+-   Exiting role: LabRole.
+-   Lalu **Create function**.
 <br>
 
 ### 2. Maka hasilnya akan tertampil seperti pada contoh gambar berikut.
@@ -44,16 +44,18 @@ Repositori ini menjabarkan langkah-langkah bagaimana cara untuk men-deploy AWS L
 >    }
 >
 >```
-> kode ini berfungsi untuk menampilkan teks 'Hello World'
+> kode ini berfungsi untuk menampilkan teks 'Hello World'.
 <br>
 
 ### 4. Kemudian buat Trigger HTTP API Gateway supaya memudahkan untuk melihat hasilnya.
 <img width="580" alt="Screenshot_5" src="https://github.com/user-attachments/assets/b8993ac9-0fc4-4577-b91f-15e2d1c75a75"><br>
-- Pilih **Add Trigger**
-- Pilih **API Gateway**
-- Intent: Create new API
-- API type: HTTP API
-- Security: Open
+- Pilih **Add Trigger**.
+- Pilih **API Gateway**.
+- Intent: Create new API.
+- API type: HTTP API.
+- Security: Open.
+
+<br>
 
 ### 5. Maka hasilnya akan tertampil seperti pada contoh gambar berikut. Kemudian pergi ke navigasi Configuration, Triggers, dan buka URL pada API endpoint untuk menampilkan teks melalui web HTTP.
 <img width="580" alt="Screenshot_6" src="https://github.com/user-attachments/assets/33609d9e-2b70-4c63-a1bc-800f261a1c4b">
@@ -77,7 +79,7 @@ Repositori ini menjabarkan langkah-langkah bagaimana cara untuk men-deploy AWS L
 >    }
 >
 >```
-> kode ini berfungsi untuk menampilkan teks 'Hello World' yang sama pada Lambda function
+> kode ini berfungsi untuk menampilkan teks 'Hello World' yang sama seperti pada Lambda function.
 
 <br>
 
@@ -98,7 +100,7 @@ Repositori ini menjabarkan langkah-langkah bagaimana cara untuk men-deploy AWS L
 - Pada bagian **Dashboard**, pilih **New Item**.
 - Beri nama bebas lalu pilih **Freestyle project** dan **OK**.
 - Pada bagian **Configure, General,** masukkan Description (Opsional).
-- Pada bagian **Configure, Source Code Management,** pilih **Git** dan tempel URL repositori GitHub yang akan digunakan, kemudian ubah **Branch** menjadi main.
+- Pada bagian **Configure, Source Code Management,** pilih **Git** dan tempel URL repositori GitHub yang akan digunakan, kemudian ubah **Branch** menjadi **main**.
 - Pada bagian **Configure, Build Environment,** pilih **Use secret text or file** dan sesuaikan dengan Credentials yang akan digunakan.
 - Pada bagian **Configure, Build Steps,** pilih **Execute shell** dan masukkan perintah berikut.
 >```
@@ -117,7 +119,7 @@ Repositori ini menjabarkan langkah-langkah bagaimana cara untuk men-deploy AWS L
 >```
 >Perintah ini digunakan untuk mengonfigurasi kredensial AWS dan memperbarui kode untuk fungsi AWS Lambda.
 - Pastikan konfigurasi yang diatur sudah benar kemudian pilih **Save**.
-- Berikutnya pilih **Build Now** untuk membangun hasil konfigurasi dan pastikan ikon indikator yang tertampil ceklis/berhasil.
+- Berikutnya pilih **Build Now** untuk membangun hasil konfigurasi secara manual dan pastikan ikon indikator yang tertampil ceklis/berhasil.
 <br>
 
 ### 3. Selanjutnya yaitu lakukan uji percobaan terhadap CI/CD yang sudah dibuat dengan melakukan cara seperti berikut.
@@ -126,7 +128,7 @@ Repositori ini menjabarkan langkah-langkah bagaimana cara untuk men-deploy AWS L
 <img width="580" alt="Screenshot_17" src="https://github.com/user-attachments/assets/b845fbc7-0a15-409c-a71f-11de1632a5ff"><br>
 
 - Pergi ke file kode di GitHub kemudian edit isi file tersebut, lalu pilih **Commit changes.**
-- Kembali ke Jenkins lalu pilih **Build Now** untuk membangun ulang secara dan pastikan ikon indikator yang tertampil ceklis/berhasil.manual.
+- Kembali ke Jenkins lalu pilih **Build Now** untuk membangun ulang secara manual dan pastikan ikon indikator yang tertampil ceklis/berhasil.
 - Berikutnya pergi ke URL HTTP tadi lalu segarkan halaman dan pastikan perubahan terjadi yang menandakan konfigurasi CI/CD Freestyle Project sudah berhasil.
 
 <br>
@@ -148,8 +150,8 @@ Repositori ini menjabarkan langkah-langkah bagaimana cara untuk men-deploy AWS L
 >    agent any
 >
 >    environment {
->        AWS_REGION = 'us-west-2'
->        LAMBDA_FUNCTION_NAME = 'hello-world-didan'
+>        AWS_REGION = 'us-east-1'
+>        LAMBDA_FUNCTION_NAME = 'lambda-arya'
 >        AWS_ACCESS_KEY_ID = credentials('AWS_ACCESS_KEY_ID')
 >        AWS_SECRET_ACCESS_KEY = credentials('AWS_SECRET_ACCESS_KEY') 
 >        AWS_SESSION_TOKEN = credentials('AWS_SESSION_TOKEN')
@@ -158,14 +160,14 @@ Repositori ini menjabarkan langkah-langkah bagaimana cara untuk men-deploy AWS L
 >    stages {
 >        stage('Checkout Source Code') {
 >            steps {
->                git branch: 'main', url: 'https://github.com/Didanrama/Task-Lambda-Function-CI-CD.git'
+>                git branch: 'main', url: 'https://github.com/pisyang/lambda-helloworld.git'
 >            }
 >        }
 >
 >        stage('Build and Package') {
 >            steps {
 >                script {
->                    bat 'powershell -Command "Compress-Archive -Path lambda_function.py -DestinationPath hello-world-didan.zip -Update"'
+>                    bat 'powershell -Command "Compress-Archive -Path lambda_function.py -DestinationPath lambda-arya.zip -Update"'
 >                }
 >            }
 >        }
@@ -176,7 +178,7 @@ Repositori ini menjabarkan langkah-langkah bagaimana cara untuk men-deploy AWS L
 >                    bat """
 >                        aws lambda update-function-code \
 >                        --function-name ${LAMBDA_FUNCTION_NAME} \
->                        --zip-file fileb://hello-world-didan.zip \
+>                        --zip-file fileb://lambda-arya.zip \
 >                        --region ${AWS_REGION}
 >                    """
 >                }
@@ -193,19 +195,20 @@ Repositori ini menjabarkan langkah-langkah bagaimana cara untuk men-deploy AWS L
 >        }
 >    }
 >```
->Perintah-perintah dalam skrip Jenkins Pipeline di atas digunakan untuk mengotomatisasi proses Continuous Integration/Continuous Deployment (CI/CD) untuk fungsi AWS Lambda
+>Perintah ini digunakan untuk mengotomatisasi proses Continuous Integration/Continuous Deployment (CI/CD) untuk fungsi AWS Lambda.
 <br>
 
-### 2. Hubungkan GitHub dengan Ngrok supaya ketika kode pada repositori GitHub sudah diedit, maka CI/CD pada Jenkins melakukan **Build** secara otomatis
+### 2. Hubungkan GitHub dengan Ngrok supaya ketika kode pada repositori GitHub sudah diedit, maka CI/CD pada Jenkins melakukan **Build** secara otomatis.
 <img width="580" alt="Screenshot_25" src="https://github.com/user-attachments/assets/690343ae-db5e-4c85-bd61-2057f03a3321">
 
 <br>
+<br>
 
-### 2. Selanjutnya yaitu lakukan uji percobaan terhadap CI/CD yang sudah dibuat dengan melakukan cara seperti berikut.
+### 3. Selanjutnya yaitu lakukan uji percobaan terhadap CI/CD yang sudah dibuat dengan melakukan cara seperti berikut.
 <img width="580" alt="Screenshot_21" src="https://github.com/user-attachments/assets/14c84a3c-e849-4a97-ae42-1cabc08543c6">
 <img width="580" alt="Screenshot_22" src="https://github.com/user-attachments/assets/0926d383-ad3a-412b-8b75-65779bf7ce5c">
 <img width="580" alt="Screenshot_23" src="https://github.com/user-attachments/assets/b1285764-c4e1-4a72-a344-d23d45042928">
 
 - Pergi ke file kode di GitHub kemudian edit isi file tersebut, lalu pilih **Commit changes.**
-- Karna pada CI/CD Pipeline suda menggunakan Ngrok, maka ketika kembali ke Jenkins CI/DC Pipeline membangun ulang secara otomatis dan pastikan ikon indikator yang tertampil ceklis/berhasil.
-- Berikutnya pergi ke URL HTTP tadi lalu segarkan halaman dan pastikan perubahan terjadi yang menandakan konfigurasi CI/CD Freestyle Project sudah berhasil.
+- Karna pada CI/CD Pipeline sudah menggunakan Ngrok, maka ketika kembali ke Jenkins CI/DC Pipeline membangun ulang secara otomatis dan pastikan ikon indikator yang tertampil ceklis/berhasil.
+- Berikutnya pergi ke URL HTTP tadi lalu segarkan halaman dan pastikan perubahan terjadi yang menandakan konfigurasi CI/CD Pipeline sudah berhasil.
