@@ -7,3 +7,7 @@ Repositori ini menjabarkan langkah-langkah bagaimana cara untuk men-deploy AWS L
   2. Jenkins: Aplikasi server otomatis
   3. AWS Console: Lambda, API Gateway, Credentials
   4. Ngrok: HTTP Tunnel
+
+## Jenkins Freestyle Project
+
+* 
