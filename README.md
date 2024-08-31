@@ -12,7 +12,8 @@ Repositori ini menjelaskan langkah-langkah untuk melakukan deploy AWS Lambda Fun
 <br> 
 
 ## Menyiapkan AWS Lambda 
-### 1. Siapkan AWS Lambda function sebagai serverless untuk deploy file dari GitHub.
+### 1. Siapkan AWS Lambda
+-   Siapkan AWS Lambda function sebagai serverless untuk deploy file dari GitHub.
 <img width="580" alt="Screenshot_1" src="https://github.com/user-attachments/assets/bfaff337-b894-4a15-9e84-b7c71f6f465a">
 <img width="580" alt="Screenshot_2" src="https://github.com/user-attachments/assets/458f6ee7-c2ee-479b-a7ae-3e03ac8eccf2"> <br> 
 
@@ -48,7 +49,8 @@ Repositori ini menjelaskan langkah-langkah untuk melakukan deploy AWS Lambda Fun
 > kode ini berfungsi untuk menampilkan teks 'Hello World'.
 <br>
 
-### 4. Kemudian buat Trigger HTTP API Gateway supaya memudahkan untuk melihat hasilnya.
+### 4. Tambahkan Trigger
+-   Kemudian buat Trigger HTTP API Gateway supaya memudahkan untuk melihat hasilnya.
 <img width="580" alt="Screenshot_5" src="https://github.com/user-attachments/assets/b8993ac9-0fc4-4577-b91f-15e2d1c75a75"><br>
 - Pilih **Add Trigger**.
 - Pilih **API Gateway**.
@@ -93,7 +95,8 @@ Repositori ini menjelaskan langkah-langkah untuk melakukan deploy AWS Lambda Fun
 <br>
 <br>
 
-### 2. Berikutnya adalah membuat CI/CD Freestyle project dengan cara mengikuti langkah-langkah di bawah ini.
+### 2. Buat CI/CD Freestyle Project
+-   Berikutnya adalah membuat CI/CD Freestyle project dengan cara mengikuti langkah-langkah di bawah ini.
 <img width="580" alt="Screenshot_9" src="https://github.com/user-attachments/assets/0dcd2e15-0883-47b3-a9d4-7c5e8dcf854d">
 <img width="580" alt="Screenshot_10" src="https://github.com/user-attachments/assets/c8bb0940-60ee-40f0-bff0-49e90bfc1195">
 <img width="580" alt="Screenshot_11" src="https://github.com/user-attachments/assets/19f32822-d5a6-4c11-b290-25fc5abd1788">
@@ -126,7 +129,8 @@ Repositori ini menjelaskan langkah-langkah untuk melakukan deploy AWS Lambda Fun
 - Pilih **Build Now** untuk membangun hasil konfigurasi secara manual dan pastikan ikon indikator yang tertampil menunjukkan status ceklis/berhasil.
 <br>
 
-### 3. Selanjutnya yaitu lakukan uji percobaan terhadap CI/CD yang sudah dibuat dengan melakukan cara seperti berikut.
+### 3. Uji coba CI/CD Freestyle Project
+-   Selanjutnya yaitu lakukan uji percobaan terhadap CI/CD yang sudah dibuat dengan melakukan cara seperti berikut.
 <img width="580" alt="Screenshot_15" src="https://github.com/user-attachments/assets/bb42d077-b470-48cc-9277-2255a966b00b">
 <img width="580" alt="Screenshot_16" src="https://github.com/user-attachments/assets/d864a060-87c6-48ed-b6a5-30dd40ef7c6e">
 <img width="580" alt="Screenshot_17" src="https://github.com/user-attachments/assets/b845fbc7-0a15-409c-a71f-11de1632a5ff"><br>
@@ -203,13 +207,15 @@ Repositori ini menjelaskan langkah-langkah untuk melakukan deploy AWS Lambda Fun
 >Perintah ini digunakan untuk mengotomatisasi proses Continuous Integration/Continuous Deployment (CI/CD) untuk fungsi AWS Lambda.
 <br>
 
-### 2. Hubungkan GitHub dengan Ngrok sehingga CI/CD di Jenkins dapat melakukan Build secara otomatis ketika kode di repositori GitHub diubah.
+### 2. Menghubungkan GitHub dengan Ngrok
+-   Hubungkan GitHub dengan Ngrok sehingga CI/CD di Jenkins dapat melakukan Build secara otomatis ketika kode di repositori GitHub diubah.
 <img width="580" alt="Screenshot_25" src="https://github.com/user-attachments/assets/690343ae-db5e-4c85-bd61-2057f03a3321">
 
 <br>
 <br>
 
-### 3. Selanjutnya yaitu lakukan uji percobaan terhadap CI/CD yang sudah dibuat dengan melakukan cara seperti berikut.
+### 3. Uji coba CI/CD Pipeline
+-   Selanjutnya yaitu lakukan uji percobaan terhadap CI/CD yang sudah dibuat dengan melakukan cara seperti berikut.
 <img width="580" alt="Screenshot_21" src="https://github.com/user-attachments/assets/14c84a3c-e849-4a97-ae42-1cabc08543c6">
 <img width="580" alt="Screenshot_22" src="https://github.com/user-attachments/assets/0926d383-ad3a-412b-8b75-65779bf7ce5c">
 <img width="580" alt="Screenshot_23" src="https://github.com/user-attachments/assets/b1285764-c4e1-4a72-a344-d23d45042928">
