@@ -2,7 +2,7 @@
 
 Repositori ini menjelaskan langkah-langkah untuk melakukan deploy AWS Lambda Function yang mencetak 'Hello World!' menggunakan Python dengan GitHub dan automation server CI/CD Jenkins. Proses ini melibatkan dua metode, yaitu Jenkins Freestyle Project dan Jenkins Pipeline. 
 <br> 
-
+<br>
 ## Alat yang diperlukan:
 
   1. Windows: Perangkat yang digunakan dalam panduan ini.
