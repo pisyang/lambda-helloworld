@@ -90,6 +90,7 @@ Repositori ini menjelaskan langkah-langkah untuk melakukan deploy AWS Lambda Fun
 
 ## Konfigurasi Jenkins Freestyle Project
 ### 1. Instal dan atur Jenkins
+-   Pastikan Plugin AWS dan GitHub sudah terinstal.
 -   Instal Jenkins dan atur AWS Credential dengan cara masuk ke **Dashboard, Manage Jenkins, Credentials,** lalu tambahkan **AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY, AWS_SESSION_TOKEN** sesuai yang Anda miliki.
 <img width="580" alt="Screenshot_24" src="https://github.com/user-attachments/assets/a9b5881f-bb24-499a-aab8-818be83d70fe">  
 <br>
