@@ -203,6 +203,7 @@ Repositori ini menjelaskan langkah-langkah untuk melakukan deploy AWS Lambda Fun
 >            echo 'Failed to update the Lambda function.'
 >        }
 >    }
+>}
 >```
 >Perintah ini digunakan untuk mengotomatisasi proses Continuous Integration/Continuous Deployment (CI/CD) untuk fungsi AWS Lambda.
 <br>
